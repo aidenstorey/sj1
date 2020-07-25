@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-public class state_manager
+public class state_queue
 {
     state _current;
     Queue<state> _state_queue = new Queue<state>();
