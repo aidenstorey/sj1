@@ -4,8 +4,12 @@ public class state_manager<T> where T: System.Enum
 {
     Dictionary<T, state_queue> _state_queues;
 
-    state_manager() {
+    public state_manager() {
         this._state_queues = new Dictionary<T, state_queue>();
+
+        foreach (var type in helper.iterate_enum<T>()) {
+            this._state_queues[type] = new state_queue();
+        }
     }
 
     public void add_queue(T queue, params state[] s)

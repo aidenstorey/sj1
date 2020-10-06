@@ -66,7 +66,7 @@ public class screen_shake : state
 
     public override void update()
     {
-        Camera.main.GetComponent<camera_screen_shake>().shake(_duration, _intensity);
+        Camera.main.GetComponent<camera_component>().shake(_duration, _intensity);
         this.completed = true;
     }
 }
